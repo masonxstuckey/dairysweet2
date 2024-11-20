@@ -3,22 +3,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f4e3; /* Light cream background */
+    background-color: #f8f4e3;
     color: #333;
 }
 
 header {
-    background-color: #4ba9ac; /* Teal diner-style */
+    background-color: #4ba9ac;
     padding: 10px 0;
     text-align: center;
 }
 
 header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 header ul li {
@@ -33,7 +33,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: #ffd700; /* Gold hover effect */
+    color: #ffd700;
 }
 
 main {
@@ -62,7 +62,6 @@ details {
     border: 1px solid #4ba9ac;
     border-radius: 5px;
     padding: 10px;
-    text-align: left;
 }
 
 details summary {
@@ -75,11 +74,4 @@ details summary {
 details .menu-category {
     padding: 10px;
     text-align: left;
-}
-
-footer {
-    background-color: #4ba9ac;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
 }
