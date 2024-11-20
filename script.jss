@@ -1,21 +1,23 @@
 document.getElementById('searchBar').addEventListener('input', function (e) {
     const query = e.target.value.toLowerCase(); // Get the search query
     const items = document.querySelectorAll('.menu-category p'); // Select all menu items
-
-    let found = false;
+    let resultsFound = false; // Track if any items match the query
 
     items.forEach((item) => {
-        const text = item.textContent.toLowerCase(); // Get item text
-        if (text.includes(query) && query !== "") {
-            found = true;
-            item.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Scroll to the item
-            item.style.backgroundColor = '#ffffa0'; // Highlight the item
-            setTimeout(() => (item.style.backgroundColor = ''), 2000); // Remove highlight after 2 seconds
+        const text = item.textContent.toLowerCase(); // Get the text of the menu item
+        if (text.startsWith(query) && query !== "") {
+            item.style.display = 'block'; // Show matching items
+            resultsFound = true;
+        } else {
+            item.style.display = 'none'; // Hide non-matching items
         }
     });
 
-    // Show "unavailable" if no match is found
-    if (!found && query !== "") {
-        alert("Item unavailable on the menu.");
+    // If no results are found, display a "No results" message
+    const noResultsMessage = document.getElementById('noResultsMessage');
+    if (!resultsFound && query !== "") {
+        noResultsMessage.style.display = 'block';
+    } else {
+        noResultsMessage.style.display = 'none';
     }
 });
