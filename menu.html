@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Grabill Dairy Sweet</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -22,18 +23,64 @@
 
     <!-- Menu Section -->
     <main>
-        <h1>Our Menu</h1>
-        <div class="menu-item">
-            <h3>Vanilla Ice Cream</h3>
-            <p>Creamy and delicious!</p>
-            <span>$3.00</span>
-        </div>
-        <!-- Add more menu items -->
+        <section id="menu">
+            <h1>Our Menu</h1>
+            <input type="text" id="searchBar" placeholder="Search for your favorite item..." aria-label="Search menu">
+            
+            <!-- Categories -->
+            <div class="menu-category">
+                <h2>Ice Cream</h2>
+                <div class="menu-item">
+                    <img src="vanilla.jpg" alt="Vanilla Ice Cream">
+                    <div>
+                        <h3>Vanilla Ice Cream</h3>
+                        <p>Creamy and classic, made with real vanilla beans.</p>
+                        <span>$3.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="chocolate.jpg" alt="Chocolate Ice Cream">
+                    <div>
+                        <h3>Chocolate Ice Cream</h3>
+                        <p>Rich and decadent, made with Belgian chocolate.</p>
+                        <span>$3.50</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Burgers</h2>
+                <div class="menu-item">
+                    <img src="classic_burger.jpg" alt="Classic Burger">
+                    <div>
+                        <h3>Classic Burger</h3>
+                        <p>Juicy beef patty with lettuce, tomato, and our special sauce.</p>
+                        <span>$5.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Beverages</h2>
+                <div class="menu-item">
+                    <img src="milkshake.jpg" alt="Chocolate Milkshake">
+                    <div>
+                        <h3>Chocolate Milkshake</h3>
+                        <p>Thick and creamy, topped with whipped cream.</p>
+                        <span>$4.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Grabill Dairy Sweet</p>
+        <div>
+            <a href="#">Facebook</a> | <a href="#">Instagram</a>
+        </div>
     </footer>
 </body>
 </html>
+
