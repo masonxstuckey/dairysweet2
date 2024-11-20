@@ -1,16 +1,14 @@
-// Filter menu items using the search bar
+// Search Bar Filter
 document.getElementById('searchBar').addEventListener('input', function (e) {
     const query = e.target.value.toLowerCase();
-    const menuItems = document.querySelectorAll('.menu-item');
+    const categories = document.querySelectorAll('.menu-category');
 
-    menuItems.forEach((item) => {
-        const itemName = item.querySelector('h3').textContent.toLowerCase();
-        const itemDescription = item.querySelector('p').textContent.toLowerCase();
-
-        if (itemName.includes(query) || itemDescription.includes(query)) {
-            item.style.display = 'flex';
+    categories.forEach((category) => {
+        const text = category.innerText.toLowerCase();
+        if (text.includes(query)) {
+            category.parentElement.style.display = 'block';
         } else {
-            item.style.display = 'none';
+            category.parentElement.style.display = 'none';
         }
     });
 });
