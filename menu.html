@@ -8,7 +8,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Header -->
     <header>
         <nav>
             <ul>
@@ -21,56 +21,65 @@
         </nav>
     </header>
 
-    <!-- Menu Section -->
+    <!-- Main Content -->
     <main>
+        <h1>Our Menu</h1>
+        <input type="text" id="searchBar" placeholder="Search for your favorite item..." aria-label="Search menu">
+        
+        <!-- Categories -->
         <section id="menu">
-            <h1>Our Menu</h1>
-            <input type="text" id="searchBar" placeholder="Search for your favorite item..." aria-label="Search menu">
-            
-            <!-- Categories -->
-            <div class="menu-category">
-                <h2>Ice Cream</h2>
-                <div class="menu-item">
-                    <img src="vanilla.jpg" alt="Vanilla Ice Cream">
-                    <div>
-                        <h3>Vanilla Ice Cream</h3>
-                        <p>Creamy and classic, made with real vanilla beans.</p>
-                        <span>$3.00</span>
-                    </div>
+            <details open>
+                <summary>Burgers</summary>
+                <div class="menu-category">
+                    <h2>Burgers</h2>
+                    <p><strong>Hamburger</strong> - $5.95<br>Make it a Double | $6.95</p>
+                    <p><strong>Cheeseburger</strong> - $6.25<br>Make it a Double | $7.95</p>
+                    <p><strong>Bacon Burger</strong> - $8.55<br>Make it a Double | $10.50</p>
+                    <p><strong>Mushroom Swiss Burger</strong> - $7.95<br>Make it a Double | $9.95</p>
                 </div>
-                <div class="menu-item">
-                    <img src="chocolate.jpg" alt="Chocolate Ice Cream">
-                    <div>
-                        <h3>Chocolate Ice Cream</h3>
-                        <p>Rich and decadent, made with Belgian chocolate.</p>
-                        <span>$3.50</span>
-                    </div>
-                </div>
-            </div>
+            </details>
 
-            <div class="menu-category">
-                <h2>Burgers</h2>
-                <div class="menu-item">
-                    <img src="classic_burger.jpg" alt="Classic Burger">
-                    <div>
-                        <h3>Classic Burger</h3>
-                        <p>Juicy beef patty with lettuce, tomato, and our special sauce.</p>
-                        <span>$5.00</span>
-                    </div>
+            <details>
+                <summary>Sandwiches</summary>
+                <div class="menu-category">
+                    <h2>Sandwiches</h2>
+                    <p><strong>Fish</strong> - $8.99</p>
+                    <p><strong>Tenderloin</strong> - $8.95</p>
+                    <p><strong>Grilled Cheese</strong> - $3.50</p>
+                    <p><strong>BLT</strong> - $6.95</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="menu-category">
-                <h2>Beverages</h2>
-                <div class="menu-item">
-                    <img src="milkshake.jpg" alt="Chocolate Milkshake">
-                    <div>
-                        <h3>Chocolate Milkshake</h3>
-                        <p>Thick and creamy, topped with whipped cream.</p>
-                        <span>$4.00</span>
-                    </div>
+            <details>
+                <summary>Chicken</summary>
+                <div class="menu-category">
+                    <h2>Chicken</h2>
+                    <p><strong>Breaded</strong> - $8.00</p>
+                    <p><strong>Grilled</strong> - $7.50</p>
+                    <p><strong>Club</strong> - $9.99</p>
+                    <p><strong>Bacon Ranch</strong> - $9.99</p>
                 </div>
-            </div>
+            </details>
+
+            <details>
+                <summary>Ice Cream</summary>
+                <div class="menu-category">
+                    <h2>Ice Cream</h2>
+                    <p><strong>Soft Serve Small</strong> - $3.80<br>Medium - $4.26 | Large - $4.72</p>
+                    <p><strong>Chocolate Shoppe Hand Dip</strong><br>1 Dip - $4.80 | 2 Dips - $6.57 | 3 Dips - $8.50</p>
+                    <p><strong>Candy Swirl Small</strong> - $6.99<br>Medium - $8.19 | Large - $9.40</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Specialty Drinks</summary>
+                <div class="menu-category">
+                    <h2>Specialty Drinks</h2>
+                    <p><strong>Boba Smoothie</strong> - $7.75</p>
+                    <p><strong>Slushies Small</strong> - $3.45<br>Medium - $4.29 | Large - $5.05</p>
+                    <p><strong>Pepsi Products Small</strong> - $1.79<br>Medium - $2.19 | Large - $2.39</p>
+                </div>
+            </details>
         </section>
     </main>
 
@@ -83,4 +92,3 @@
     </footer>
 </body>
 </html>
-
