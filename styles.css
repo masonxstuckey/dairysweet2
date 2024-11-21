@@ -56,6 +56,21 @@ h1 {
     border-radius: 5px;
 }
 
+#resultsContainer p {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resultsContainer p:hover {
+    background-color: #4ba9ac;
+    color: white;
+}
+
+
 details {
     margin: 10px 0;
     background-color: #e9f7f8;
