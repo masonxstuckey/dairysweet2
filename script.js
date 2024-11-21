@@ -1,7 +1,7 @@
 document.getElementById('searchBar').addEventListener('input', function (e) {
-    const query = e.target.value.toLowerCase(); // Capture the input text and convert to lowercase
+    const query = e.target.value.toLowerCase(); // Capture input text and convert to lowercase
     const items = document.querySelectorAll('.menu-category p'); // Select all menu items
-    const resultsContainer = document.getElementById('resultsContainer'); // Get the results container
+    const resultsContainer = document.getElementById('resultsContainer'); // Select the results container
 
     // Clear previous results
     resultsContainer.innerHTML = '';
@@ -13,12 +13,12 @@ document.getElementById('searchBar').addEventListener('input', function (e) {
         if (text.includes(query) && query !== "") {
             const resultItem = document.createElement('p'); // Create a new result item
             resultItem.textContent = item.textContent; // Set the text of the result item
-            resultsContainer.appendChild(resultItem); // Add the result to the container
+            resultsContainer.appendChild(resultItem); // Append the result to the container
             resultsFound = true;
         }
     });
 
-    // Handle "No Results" message
+    // Display "No Results" message if no matches are found
     if (!resultsFound && query !== "") {
         resultsContainer.innerHTML = '<p style="color: red; font-weight: bold;">No matching items found.</p>';
     }
